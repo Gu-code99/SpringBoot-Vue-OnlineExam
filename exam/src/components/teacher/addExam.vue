@@ -9,17 +9,42 @@
         <el-input v-model="form.description"></el-input>
       </el-form-item>
       <el-form-item label="所属学院">
-        <el-input v-model="form.institute"></el-input>
+        <el-select v-model="form.institute" placeholder="请选择" class="select1">
+          <el-option
+            v-for="item in options1"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
       </el-form-item>
       <el-form-item label="所属专业">
-        <el-input v-model="form.major"></el-input>
+        <el-select v-model="form.major" placeholder="请选择" class="select1">
+          <el-option
+            v-for="item in options2"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
       </el-form-item>
+      <el-form-item label="所属年级">
+        <el-select v-model="form.grade" placeholder="请选择" class="select1">
+          <el-option
+            v-for="item in options3"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
+      </el-form-item>
+
       <el-form-item label="年级">
         <el-input v-model="form.grade"></el-input>
       </el-form-item>
-      <el-form-item label="考试日期">
+      <el-form-item label="考试日期" >
         <el-col :span="11">
-          <el-date-picker placeholder="选择日期" v-model="form.examDate" style="width: 100%;"></el-date-picker>
+          <el-date-picker  placeholder="选择日期" v-model="form.examDate" style="width: 100%;"></el-date-picker>
         </el-col>
       </el-form-item>
       <el-form-item label="持续时间">
@@ -46,6 +71,55 @@
 export default {
   data() {
     return {
+      options1: [{
+        value: '新乡学院',
+        label: '新乡学院'
+      }, {
+        value: '选项2',
+        label: '双皮奶'
+      }, {
+        value: '选项3',
+        label: '蚵仔煎'
+      }, {
+        value: '选项4',
+        label: '龙须面'
+      }, {
+        value: '选项5',
+        label: '北京烤鸭'
+      }],
+      value: '',
+      options2: [{
+        value: '新乡学院',
+        label: '新乡学院'
+      }, {
+        value: '选项2',
+        label: '双皮奶'
+      }, {
+        value: '选项3',
+        label: '蚵仔煎'
+      }, {
+        value: '选项4',
+        label: '龙须面'
+      }, {
+        value: '选项5',
+        label: '北京烤鸭'
+      }],
+      options3: [{
+        value: '新乡学院',
+        label: '新乡学院'
+      }, {
+        value: '选项2',
+        label: '双皮奶'
+      }, {
+        value: '选项3',
+        label: '蚵仔煎'
+      }, {
+        value: '选项4',
+        label: '龙须面'
+      }, {
+        value: '选项5',
+        label: '北京烤鸭'
+      }],
       form: { //表单数据初始化
         source: null,
         description: null,
@@ -97,7 +171,7 @@ export default {
     cancel() { //取消按钮
       this.form = {}
     },
-    
+
   }
 };
 </script>
@@ -105,6 +179,8 @@ export default {
 .add {
   padding: 0px 40px;
   width: 400px;
+}.select1 {
+  width: 320px;
 }
 </style>
 

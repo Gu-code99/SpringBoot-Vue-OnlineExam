@@ -32,16 +32,16 @@
         </div>
       </el-col>
     </el-row>
-    <el-row class="footer">
+    <!--<el-row class="footer">
       <el-col>
-        <p class="msg2">版权所有 ©2019 <!--重庆文理学院计科2班余晓江--> 保留所有权利 渝ICP备19001371号</p>
+        <p class="msg2">版权所有 ©2019 &lt;!&ndash;重庆文理学院计科2班余晓江&ndash;&gt; 保留所有权利 渝ICP备19001371号</p>
       </el-col>
     </el-row>
     <section class="remind">
       <span>管理员账号：9527</span>
       <span>教师账号：20081001</span>
       <span>密码都是：123456</span>
-    </section>
+    </section>-->
   </div>
 </template>
 

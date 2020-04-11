@@ -4,7 +4,7 @@
     <div class="title">我的练习</div>
     <div class="wrapper">
       <ul class="top">
-        <li class="order">
+        <!--<li class="order">
           <el-badge :value="12" class="item" type="primary">
             <span>全部</span>
           </el-badge>
@@ -23,7 +23,7 @@
           <el-badge :value="1" class="item">
             <span>已过期</span>
           </el-badge>
-        </li>
+        </li>-->
         <li class="search-li"><div class="icon"><input type="text" placeholder="试卷名称" class="search" v-model="key"><i class="el-icon-search"></i></div></li>
         <li><el-button type="primary" @click="search()">搜索试卷</el-button></li>
       </ul>
@@ -73,7 +73,7 @@ export default {
     this.loading = true
   },
   // watch: {
-    
+
   // },
   methods: {
     //获取当前所有考试信息
