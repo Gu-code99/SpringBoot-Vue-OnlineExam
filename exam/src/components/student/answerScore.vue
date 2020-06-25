@@ -1,10 +1,10 @@
 <template>
   <div class="score">
-    <div class="title">
+<!--    <div class="title">
       <p class="name">计算机网络</p>
       <p class="description">(总分：100分,限时：100分钟)</p>
-      <p class="description">学生：大咸鱼</p>
-    </div>
+      <p class="description">学生：王小利</p>
+    </div>-->
     <div class="total">
       <div class="look">
         本次考试成绩
@@ -82,24 +82,24 @@ export default {
   }
   .img1Transform {
     opacity: 1 !important;
-    transform: translateX(30px) !important;  
+    transform: translateX(30px) !important;
     transition: all 0.6s ease !important;
   }
   .img2Transform {
     opacity: 1 !important;
-    transform: translateX(-30px) !important;  
+    transform: translateX(-30px) !important;
     transition: all 0.6s ease !important;
   }
   .img1 {
     margin-top: 70px;
     opacity: 0;
-    transform: translateX(0px);  
+    transform: translateX(0px);
     transition: all 0.6s ease;
   }
   .img2 {
     margin-top: 30px;
     opacity: 0;
-    transform: translateX(0px);  
+    transform: translateX(0px);
     transition: all 0.6s ease;
   }
 }
@@ -169,7 +169,7 @@ export default {
       margin-top: 80px;
       margin-bottom: 20px;
       transition: all 1s ease;
-      
+
       span:nth-child(1) {
         font-size: 36px;
         font-weight: 600;

@@ -6,16 +6,44 @@
         <el-input v-model="form.studentName"></el-input>
       </el-form-item>
       <el-form-item label="性别">
-        <el-input v-model="form.sex"></el-input>
+        <el-select v-model="form.sex" placeholder="请选择" class="select2">
+          <el-option
+            v-for="item in options10"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
       </el-form-item>
       <el-form-item label="学院">
-        <el-input v-model="form.institute"></el-input>
+        <el-select v-model="form.institute" placeholder="请选择" class="select2">
+          <el-option
+            v-for="item in options4"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
       </el-form-item>
       <el-form-item label="所属专业">
-        <el-input v-model="form.major"></el-input>
+        <el-select v-model="form.major" placeholder="请选择" class="select2">
+          <el-option
+            v-for="item in options5"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
       </el-form-item>
-      <el-form-item label="年级">
-        <el-input v-model="form.grade"></el-input>
+      <el-form-item label="所属年级">
+        <el-select v-model="form.grade" placeholder="请选择" class="select2">
+          <el-option
+            v-for="item in options6"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
       </el-form-item>
       <el-form-item label="班级">
         <el-input v-model="form.clazz"></el-input>
@@ -44,6 +72,65 @@
 export default {
   data() {
     return {
+      options10: [{
+        value: '男',
+        label: '男'
+      }, {
+        value: '女',
+        label: '女'
+      }],
+      options4: [{
+        value: '信息工程学院',
+        label: '信息工程学院'
+      }, {
+        value: '金融学院',
+        label: '金融学院'
+      }, {
+        value: '化工学院',
+        label: '化工学院'
+      }, {
+        value: '土木工程建筑学院',
+        label: '土木工程建筑学院'
+      },],
+      value: '',
+      options5: [{
+        value: '计算机科学与技术',
+        label: '计算机科学与技术'
+      }, {
+        value: '网络工程',
+        label: '网络工程'
+      }, {
+        value: '信息工程',
+        label: '信息工程'
+      }, {
+        value: '金融工程',
+        label: '金融工程'
+      },{
+        value: '保险学',
+        label: '保险学'
+      },{
+        value: '应用化学',
+        label: '应用化学'
+      },{
+        value: '土木工程',
+        label: '土木工程'
+      }, {
+        value: '给排水科学与工程',
+        label: '给排水科学与工程'
+      }],
+      options6: [{
+        value: '2016',
+        label: '2016'
+      }, {
+        value: '2017',
+        label: '2017'
+      }, {
+        value: '2018',
+        label: '2018'
+      }, {
+        value: '2019',
+        label: '2019'
+      }],
       form: { //表单数据初始化
         studentName: null,
         grade: null,
@@ -80,7 +167,7 @@ export default {
     cancel() { //取消按钮
       this.form = {}
     },
-    
+
   }
 };
 </script>
@@ -88,6 +175,8 @@ export default {
 .add {
   padding: 0px 40px;
   width: 400px;
-}
+}.select2 {
+   width: 320px;
+ }
 </style>
 

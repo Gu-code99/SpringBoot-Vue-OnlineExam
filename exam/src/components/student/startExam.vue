@@ -4,6 +4,7 @@
     <div class="title">我的练习</div>
     <div class="wrapper">
       <ul class="top">
+<!--以下为假数据，测试页面局部-->
         <!--<li class="order">
           <el-badge :value="12" class="item" type="primary">
             <span>全部</span>

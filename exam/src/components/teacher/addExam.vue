@@ -38,10 +38,6 @@
           </el-option>
         </el-select>
       </el-form-item>
-
-      <el-form-item label="年级">
-        <el-input v-model="form.grade"></el-input>
-      </el-form-item>
       <el-form-item label="考试日期" >
         <el-col :span="11">
           <el-date-picker  placeholder="选择日期" v-model="form.examDate" style="width: 100%;"></el-date-picker>
@@ -72,53 +68,56 @@ export default {
   data() {
     return {
       options1: [{
-        value: '新乡学院',
-        label: '新乡学院'
+        value: '信息工程学院',
+        label: '信息工程学院'
       }, {
-        value: '选项2',
-        label: '双皮奶'
+        value: '金融学院',
+        label: '金融学院'
       }, {
-        value: '选项3',
-        label: '蚵仔煎'
+        value: '化工学院',
+        label: '化工学院'
       }, {
-        value: '选项4',
-        label: '龙须面'
-      }, {
-        value: '选项5',
-        label: '北京烤鸭'
-      }],
+        value: '土木工程建筑学院',
+        label: '土木工程建筑学院'
+      },],
       value: '',
       options2: [{
-        value: '新乡学院',
-        label: '新乡学院'
+        value: '计算机科学与技术',
+        label: '计算机科学与技术'
       }, {
-        value: '选项2',
-        label: '双皮奶'
+        value: '网络工程',
+        label: '网络工程'
       }, {
-        value: '选项3',
-        label: '蚵仔煎'
+        value: '信息工程',
+        label: '信息工程'
       }, {
-        value: '选项4',
-        label: '龙须面'
+        value: '金融工程',
+        label: '金融工程'
+      },{
+        value: '保险学',
+        label: '保险学'
+      },{
+        value: '应用化学',
+        label: '应用化学'
+      },{
+        value: '土木工程',
+        label: '土木工程'
       }, {
-        value: '选项5',
-        label: '北京烤鸭'
+        value: '给排水科学与工程',
+        label: '给排水科学与工程'
       }],
       options3: [{
-        value: '新乡学院',
-        label: '新乡学院'
+        value: '2016',
+        label: '2016'
       }, {
-        value: '选项2',
-        label: '双皮奶'
+        value: '2017',
+        label: '2017'
       }, {
-        value: '选项3',
-        label: '蚵仔煎'
+        value: '2018',
+        label: '2018'
       }, {
-        value: '选项4',
-        label: '龙须面'
-      }, {
-        value: '选项5',
-        label: '北京烤鸭'
+        value: '2019',
+        label: '2019'
       }],
       form: { //表单数据初始化
         source: null,

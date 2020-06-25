@@ -156,7 +156,8 @@
         <!-- 填空题部分 -->
         <div class="change fill" v-if="optionValue == '填空题'">
           <div class="title">
-            <el-tag>题目:</el-tag><span>输入题目,形如--从计算机网络系统组成的角度看，计算机网络可以分为()和()。注意需要考生答题部分一定要用括号（英文半角）括起来。</span>
+            <el-tag>题目:</el-tag><span>输入题目,形如--从计算机网络系统组成的角度看，
+            计算机网络可以分为()和()。注意需要考生答题部分一定要用括号（英文半角）括起来。</span>
             <el-input
               type="textarea"
               rows="4"
@@ -335,7 +336,7 @@ export default {
       subject: '', //试卷名称用来接收路由参数
       postChange: { //选择题提交内容
         subject: '', //试卷名称
-        level: '', //难度等级选中值 
+        level: '', //难度等级选中值
         rightAnswer: '', //正确答案选中值
         section: '', //对应章节
         question: '', //题目
@@ -347,7 +348,7 @@ export default {
       },
       postFill: { //填空题提交内容
         subject: '', //试卷名称
-        level: '', //难度等级选中值 
+        level: '', //难度等级选中值
         answer: '', //正确答案
         section: '', //对应章节
         question: '', //题目
@@ -355,7 +356,7 @@ export default {
       },
       postJudge: { //判断题提交内容
         subject: '', //试卷名称
-        level: '', //难度等级选中值 
+        level: '', //难度等级选中值
         answer: '', //正确答案
         section: '', //对应章节
         question: '', //题目
@@ -384,7 +385,7 @@ export default {
           fillNumber: this.fillNumber,
           judgeNumber: this.judgeNumber,
           paperId: this.paperId,
-          subject: '计算机网络' //题目数量太少，指定为计算机网络出题
+          subject: '计算机网络' //题库太小，指定为计算机网络出题
         }
       }).then(res => {
         console.log(res)
@@ -419,7 +420,7 @@ export default {
         url: '/api/MultiQuestion',
         method: 'post',
         data: {
-          ...this.postChange          
+          ...this.postChange
         }
       }).then(res => { //添加成功显示提示
         let status = res.data.code
@@ -584,7 +585,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-      }        
+      }
     }
     .fill {
       .fillAnswer {

@@ -6,7 +6,7 @@
       <el-table-column prop="institute" label="学院" width="200"></el-table-column>
       <el-table-column prop="sex" label="性别" width="120"></el-table-column>
       <el-table-column prop="tel" label="联系方式" width="120"></el-table-column>
-      <el-table-column prop="email" label="密码" width="120"></el-table-column>
+      <el-table-column prop="pwd" label="密码" width="120"></el-table-column>
       <el-table-column prop="cardId" label="身份证号" width="120"></el-table-column>
       <el-table-column prop="type" label="职称" width="120"></el-table-column>
       <el-table-column fixed="right" label="操作" width="150">
@@ -28,7 +28,7 @@
     </el-pagination>
     <!-- 编辑对话框-->
     <el-dialog
-      title="编辑老师信息"
+      title="编辑教师信息"
       :visible.sync="dialogVisible"
       width="30%"
       :before-close="handleClose">
@@ -69,6 +69,7 @@
 export default {
   data() {
     return {
+
       pagination: {
         //分页后的考试信息
         current: 1, //当前页
